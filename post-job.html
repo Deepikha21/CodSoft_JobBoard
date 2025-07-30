@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JobFinder | Post a Job</title>
+  <style>
+    :root {
+      --navy: #0a192f;
+      --cyan: #00f0ff;
+      --light: #e0f7fa;
+      --text: #ffffff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Times New Roman', serif;
+    }
+
+    body {
+      background: #0a192f;
+      color: var(--text);
+      animation: gradientShift 20s ease infinite;
+    }
+
+    @keyframes gradientShift {
+      0% { background-color: #0a192f; }
+      50% { background-color: #0d2b45; }
+      100% { background-color: #0a192f; }
+    }
+
+    header {
+      background: rgba(10, 25, 47, 0.95);
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 0 20px #00f0ff44;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header h1 {
+      color: var(--cyan);
+      font-size: 2.5rem;
+      text-shadow: 0 0 10px var(--cyan);
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      margin: 0 15px;
+      color: var(--text);
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--cyan);
+      text-shadow: 0 0 8px var(--cyan);
+    }
+
+    main {
+      max-width: 700px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    h2 {
+      color: var(--cyan);
+      text-align: center;
+      margin-bottom: 30px;
+      text-shadow: 0 0 8px var(--cyan);
+    }
+
+    form {
+      background: #12263a;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px #00f0ff44;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--light);
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: none;
+      border-radius: 6px;
+      background: #1f4068;
+      color: var(--text);
+    }
+
+    button {
+      background: var(--cyan);
+      color: #000;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 0 12px var(--cyan);
+      transition: transform 0.3s ease;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+      background: #00dbff;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #102336;
+      color: var(--light);
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>JobFinder</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="jobs.html">Jobs</a>
+      <a href="post-job.html">Post a Job</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Post a New Job</h2>
+    <form>
+      <label for="title">Job Title:</label>
+      <input type="text" id="title" name="title" required />
+
+      <label for="company">Company Name:</label>
+      <input type="text" id="company" name="company" required />
+
+      <label for="location">Location:</label>
+      <input type="text" id="location" name="location" required />
+
+      <label for="description">Job Description:</label>
+      <textarea id="description" name="description" rows="5" required></textarea>
+
+      <button type="submit">Submit Job</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 JobFinder. All rights reserved.</p>
+  </footer>
+</body>
+</html>

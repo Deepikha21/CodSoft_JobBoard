@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JobFinder | Home</title>
+  <style>
+    :root {
+      --navy: #0a192f;
+      --cyan: #00f0ff;
+      --light: #e0f7fa;
+      --text: #ffffff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Times New Roman', serif;
+    }
+
+    body {
+      background: #0a192f;
+      color: var(--text);
+      overflow-x: hidden;
+      position: relative;
+      animation: gradientShift 20s ease infinite;
+    }
+
+    @keyframes gradientShift {
+      0% { background-color: #0a192f; }
+      50% { background-color: #0d2b45; }
+      100% { background-color: #0a192f; }
+    }
+
+    header {
+      background: rgba(10, 25, 47, 0.95);
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 0 20px #00f0ff44;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      transition: background 0.5s ease;
+    }
+
+    header h1 {
+      color: var(--cyan);
+      font-size: 2.8rem;
+      text-shadow: 0 0 10px var(--cyan);
+      transition: color 0.3s;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      margin: 0 15px;
+      color: var(--text);
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--cyan);
+      text-shadow: 0 0 8px var(--cyan);
+    }
+
+    .hero {
+      text-align: center;
+      padding: 60px 20px 40px;
+      transition: all 0.5s ease-in-out;
+    }
+
+    .hero img {
+      width: 85%;
+      max-width: 600px;
+      border-radius: 12px;
+      box-shadow: 0 0 30px var(--cyan);
+      margin-bottom: 30px;
+      transition: transform 0.4s ease;
+    }
+
+    .hero img:hover {
+      transform: scale(1.02);
+    }
+
+    .hero h2 {
+      font-size: 2.5rem;
+      color: var(--cyan);
+      text-shadow: 0 0 12px var(--cyan);
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: var(--light);
+      margin-bottom: 25px;
+    }
+
+    .btn {
+      background: var(--cyan);
+      color: #000;
+      padding: 12px 30px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 0 15px var(--cyan);
+      transition: transform 0.3s, background 0.3s;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+      background: #00cfff;
+    }
+
+    .categories {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 50px 20px;
+      transition: all 0.4s ease-in-out;
+    }
+
+    .category {
+      background: #12263a;
+      border-radius: 10px;
+      padding: 30px;
+      width: 220px;
+      text-align: center;
+      box-shadow: 0 0 12px #00f0ff44;
+      transition: transform 0.3s;
+    }
+
+    .category:hover {
+      transform: translateY(-5px);
+    }
+
+    .category i {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      color: var(--cyan);
+    }
+
+    .category h3 {
+      color: var(--light);
+    }
+
+    .testimonials {
+      padding: 50px 20px;
+      background: #0e2238;
+      text-align: center;
+      transition: background 0.4s ease-in;
+    }
+
+    .testimonials h2 {
+      color: var(--cyan);
+      margin-bottom: 30px;
+      text-shadow: 0 0 8px var(--cyan);
+    }
+
+    .testimonial {
+      max-width: 600px;
+      margin: 0 auto 30px;
+      font-style: italic;
+      color: var(--light);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #102336;
+      color: var(--light);
+      transition: background 0.3s ease-in-out;
+    }
+  </style>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header>
+    <h1>JobFinder</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="jobs.html">Jobs</a>
+      <a href="post-job.html">Post a Job</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <img src="images.jpeg" alt="Job search image">
+    <h2>Launch Your Career</h2>
+    <p>Explore top jobs and connect with the best companies, all in one place.</p>
+    <a href="jobs.html" class="btn">Browse Jobs</a>
+  </section>
+
+  <section class="categories">
+    <div class="category">
+      <i class="fas fa-laptop-code"></i>
+      <h3>Tech Jobs</h3>
+    </div>
+    <div class="category">
+      <i class="fas fa-bullhorn"></i>
+      <h3>Marketing</h3>
+    </div>
+    <div class="category">
+      <i class="fas fa-briefcase"></i>
+      <h3>Business</h3>
+    </div>
+    <div class="category">
+      <i class="fas fa-paint-brush"></i>
+      <h3>Design</h3>
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <h2>What Our Users Say</h2>
+    <div class="testimonial">“JobFinder helped me land my dream job in just 2 weeks!” — Aishwarya, Frontend Dev</div>
+    <div class="testimonial">“I posted a job here and found the perfect candidate in days.” — Ramesh, HR Manager</div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 JobFinder. All rights reserved.</p>
+  </footer>
+</body>
+</html>
